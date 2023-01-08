@@ -6,14 +6,13 @@
 spenden html for: Studienarbeit Programmierung von Webanwendungsoberflächen
 Description: Fiktive Vereinsseite für zur Registrierung von Kleiderspenden
 
-Version: 0.1
+Version: 0.3
 Author: Riccardo Princiotto
 License: none
 Tags: html5, responsiv, bootstrap, CSS animations, Adobe content
 
 Notices: the named society, the texts and everything on this page is fiction.
 -->
-
 
 <head>                                                                                          <!--Head area is not visible-->
 
@@ -118,6 +117,106 @@ Notices: the named society, the texts and everything on this page is fiction.
           </div>
         </div>
       </section>  <!--end of section one-->
+
+      <!--section 2 could be individual at different html, starts with standard grid-->
+      <section class="section" id="section2">
+        <h2 id="h2S2">Deine Daten / Allgemeines</h2>
+        <div id="contentS2Donate">   <!--div for individual grid on this section-->
+          <!--Position defined in style with the id`s-->
+            <h3 id="h3bringOrCollect">Sollen wir deine Spende abholen oder bringst du sie uns?</h3>
+            <div id="bringRadio">
+              <input type="radio" id="bring" value="bring" class="form-check-input ">
+              <label for="bring" class="labelRadio labelPosition">Ich bringe die Spende zu euch.</label>
+            </div>
+            <div id="collectRadio">
+              <input type="radio" id="collect" value="collect" class="form-check-input ">
+              <label for="collect" class="labelRadio labelPosition">Holt die Spende bitte bei mir ab. <br>
+                <span class="smallText">(Du musst im Postleitzahlgebiet der Geschäftsstelle wohnen) </span>
+              </label>
+            </div>
+            <!--these text will fadein and out depends on the radio button value -->
+            <p id="emptyPlaceholder">  </p>
+            <p id="pCollect" class="pCollect" >Wir holen deine Spende gerne ab, dazu wähle bitte eine Geschäftsstelle aus
+              und gib deine Adresse ein.
+            </p>
+            <p id="pBring" class="pBring">Danke dass du uns deine Spende vorbei bringst. Bitte wähle nun die 
+              Geschäftsstelle aus, zu der du die Spende bringst.
+            </p>
+
+            <!--choose of the location -->
+            <div id="chooseLocation">
+              <form>
+                <label class="labelDropdown">
+                  Bitte wähle eine Geschäftsstelle aus:
+                  <select class="form-select" name="location" id="location" size="1">
+                    <option value="" disabled selected hidden>Geschäftsstelle auswählen</option>
+                    <option value="10">10xxx Berlin</option>
+                    <option value="44">44xxx Dortmund</option>
+                    <option value="60">60xxx Frankfurt am Main</option>
+                    <option value="20">20xxx Hamburg</option>
+                    <option value="80">80xxx München</option>
+                  </select>
+                </label>
+              </form>   
+            </div>
+
+            <!--Input fields for personal data. Adress informations only necessary if radio collect was checked-->
+            <h3 id="headlineData">Bitte gib hier deine Daten ein:</h3>
+            <div id="personalDataIndependend">
+              <form>
+                <!--name, surname, email and day of birth-->
+                <input type="text" id="nameInput" class="form-control" placeholder="Vorname" >
+                <label for="nameInput" class="labelInputField">Vorname</label>
+                <input type="text" id="surnameInput" class="form-control" placeholder="Nachname" >
+                <label for="surnameInput" class="labelInputField">Nachname</label>
+                <input type="email" id="emailInput" class="form-control" placeholder="max@mustermann.de" >
+                <label for="emailInput" class="labelInputField">e-Mail Adresse</label>
+                <input type="date" id="birthdayInput" class="form-control" placeholder="Vorname" >
+                <label for="birthdayInput" class="labelInputField">Geburtsdatum</label>
+              </form>
+            </div>
+            <div id="personalDataDependence">
+              <form>   
+                <!--street, house number, zip code and city-->            
+                <input type="text" id="streetInput" class="form-control" placeholder="Straße" >
+                <label for="streetInput" class="labelInputField">Straße</label>
+                <input type="text" id="houseNumerInput" class="form-control" placeholder="Hausnummer" >
+                <label for="houseNumerInput" class="labelInputField">Hausnummer</label>
+                <input type="number" id="zipInput" class="form-control" placeholder="Postleitzahl">
+                <label for="zipInput" class="labelInputField">Postleitzahl</label>
+                <input type="text" id="cityInput" class="form-control" placeholder="Ort" >
+                <label for="cityInput" class="labelInputField">Ort</label>
+              </form>
+            </div>                           
+            <!--Choose the area where the donation has to go-->
+            <div id="chooseWarArea">
+              <form>
+                <label class="labelDropdown">
+                  Bitte wähle aus, wohin wir deine Spende bringen sollen:
+                  <select class="form-select" size="1" id="sendToLocation">
+                    <option value="" disabled selected hidden>Gebiet auswählen</option>                
+                    <option value="1">Kriesengebiet 1</option>
+                    <option value="2">Kriesengebiet 2</option>
+                    <option value="3">Kriesengebiet 3</option>
+                    <option value="4">Kriesengebiet 4</option>
+                    <option value="5">Kriesengebiet 5</option>
+                  </select>
+                </label>
+              </form>
+            </div>
+            <!--submit personal data-->
+            <p id="textAfterPersonalData" class="pBig">
+              Wenn Deine Daten so passen, klicke auf Abschicken. Danach kannst Du Deine Spende registieren.
+            </p>
+            <button id="submitPersonalData" class="buttonStyle">Abschicken</button>
+            <!--text appears after submit and check data-->
+            <p id="textAfterSubmit" class="pBig">
+              Soweit so gut... Nun kannst du deine Spende registrieren. Wenn du nicht weist, was du alles
+              spenden kannst, kannst du <span><a href="about.html">hier</a></span> nochmal nachlesen.
+            </p>         
+        </div>
+      </section>
+
     </main>
 
     <!--footer with three columns-->

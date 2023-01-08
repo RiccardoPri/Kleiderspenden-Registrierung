@@ -520,3 +520,137 @@ box-shadow: rgba(0, 0, 0, 0.7) 0px .25em 1em, inset rgba(0, 0, 0, 0.15) 0px -.5e
 .pBlog {
     color: white;
 }
+
+/********************************************************************************
+    positioning for spenden html
+*********************************************************************************/
+/************ Section 2 personal data  *************/
+/************ div of section 2 place in content area and get own grid ***********/
+#contentS2Donate {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 100px) 1fr 200px repeat(3, 100px);
+}
+#h3bringOrCollect {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 25px;
+}
+#bringRadio {
+    grid-column: 1; 
+    grid-row: 2;  
+    justify-self: center;
+}
+#collectRadio {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+}
+#pBring, #pCollect {
+    display: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+    margin-top: 25px;
+    text-align: center;
+}
+#emptyPlaceholder {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 3;
+    margin-top: 25px;
+    text-align: center;
+}
+#chooseLocation {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 4;
+    justify-self: center;
+}
+#headlineData {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 5;
+    justify-self: center;
+}
+#personalDataIndependend {
+    grid-column: 1;
+    grid-row: 6;
+    justify-self: right;
+    margin-right: 20px;
+}
+#personalDataDependence {
+        grid-column: 2;
+        grid-row: 6;
+        justify-self: left;
+        margin-left: 20px;
+}
+#chooseWarArea {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 7;
+    justify-self: center;
+    align-self: center;
+}
+#textAfterPersonalData {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 8;
+    justify-self: center;
+}
+#submitPersonalData {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 9;
+    justify-self: center;
+}
+#textAfterSubmit {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 10;
+    justify-self: center;
+    text-align: center;
+}
+
+/********************************************************************************
+    style for spenden html
+*********************************************************************************/
+/************ Section 2 personal data *************/
+#bring, #collect {
+    height: 25px;
+    width: 25px;
+    margin-top: 6.5px;  
+}
+#bring:checked, #collect:checked {
+    background: #4CB055;
+    border-color: black;
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 100%);
+} 
+#bring:focus, #collect:focus {
+    border-color: gray;
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 100%);
+}
+#bringRadio label, #collectRadio label, .pBring, .pCollect, .labelDropdown {
+    font-size: 125%;
+    font-family: calendula, sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+}
+.smallText {
+    font-size: 50%;
+}
+.form-select:focus, .form-control:focus {
+    border-color: #4CB055 !important;
+    box-shadow: 10px -5px 5px #4CB055 !important;
+}
+.form-control {   
+    width: 200px !important;
+}
+.pBig {
+    font-size: 125%;
+}
