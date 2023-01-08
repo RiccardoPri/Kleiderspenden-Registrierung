@@ -1,8 +1,9 @@
 <!DOCTYPE html>                                                                                 <!--document type as html-->
 <html lang="de">                                                                                <!--language of the page (important for browsermassages)-->
 
+
 <!--
-Index html for: Studienarbeit Programmierung von Webanwendungsoberflächen
+spenden html for: Studienarbeit Programmierung von Webanwendungsoberflächen
 Description: Fiktive Vereinsseite für zur Registrierung von Kleiderspenden
 
 Version: 0.1
@@ -13,11 +14,12 @@ Tags: html5, responsiv, bootstrap, CSS animations, Adobe content
 Notices: the named society, the texts and everything on this page is fiction.
 -->
 
-<head>                                                                                        <!--Head area is not visible-->
+
+<head>                                                                                          <!--Head area is not visible-->
 
   <meta charset="utf-8">                                                                      <!--Charset UTF-8-->
   <meta name="viewport" content="width = device-width, initial-scale = 1.0" />                <!--Viewport initial-->
-  <title>Home</title>                                                                         <!--Text of the tab-->
+  <title>Spende registieren</title>                                                           <!--Text of the tab-->
   <meta name="description" content="Beschreibungstext">                                       <!--Discription for search engines-->
   <link rel="shortcut icon" href="../assets/img/logo.gif" />                                  <!--Icon at the tab-->
   <link rel="stylesheet" href="../assets/css/style.css">                                      <!--Including own Stylesheet-->
@@ -45,7 +47,7 @@ Notices: the named society, the texts and everything on this page is fiction.
           <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="../files/index.html">
               <img src="../assets/img/logo.gif" width="30" height="30" class="d-inline-block align-top" alt="">
-                <span class="logoTextNav">Kleiderspende (fiktiver Verein)</span>
+              <span class="logoTextNav">Kleiderspende (fiktiver Verein)</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarFix" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -56,7 +58,7 @@ Notices: the named society, the texts and everything on this page is fiction.
                 <li class="nav-item">
                   <a class="nav-link" href="../files/about.html">About</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                   <a class="nav-link" href="../files/spenden.html">Spenden</a>
                 </li>
                 <li class="nav-item">
@@ -84,7 +86,7 @@ Notices: the named society, the texts and everything on this page is fiction.
                     <li class="navStartItem">
                       <a href="../files/about.html">About</a>
                     </li>
-                    <li class="navStartItem">
+                    <li class="navStartItem active">
                       <a href="../files/spenden.html">Spenden</a>
                     </li>
                     <li class="navStartItem">
@@ -96,14 +98,14 @@ Notices: the named society, the texts and everything on this page is fiction.
                 </ul>
              </nav>
 
-          <!--Title image with bootstrap class img-fluid for responsiv design-->
-          <img src="../assets/img/title_img.jpg" id="titleImage" class="titleImage img-fluid">
-          <!--Colored background area for section 1-->
+          <!--Title image with boostrap img-fluid for responsiv desing-->
+          <img src="../assets/img/donate.jpg" id="titleImage" class="titleImage img-fluid">
+          <!--class for the underlaying background-->
           <div id="contentS1background" class="contentS1background"></div>
-          <!--Text area for section1 include text and button-->
+          <!--div for the text area in section1-->
           <div id="contentS1Text">
-            <article id="titleArticle">
-              <h1>Hi! <br> Schön das Du da bist...</h1>
+            <article id="titleArticle">  
+              <h1>Auf geht`s. <br> In nur wenigen Schritten!</h1>
               <!--Text placeholder with lorem ipsum generator-->
               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
                   sed diam nonumy eirmod tempor invidunt ut labore et 
@@ -111,57 +113,53 @@ Notices: the named society, the texts and everything on this page is fiction.
                   At vero eos et accusam et justo duo dolores et 
                   ea rebum. Stet clita kasd gubergren, no sea takimata 
                   sanctus est Lorem ipsum dolor sit amet. 
-              </p>
+              </p>  
             </article>
-            <button type="button" id="buttonDonate" class="buttonStyle" onclick="location.href='../files/spenden.html'">Jetzt spenden!</button>
-          </div>         
+          </div>
         </div>
-      </section>
-
-
-      <!--Content Area for every single html-->
-
+      </section>  <!--end of section one-->
+    </main>
 
     <!--footer with three columns-->
     <footer>
-        <!--first column for contact information-->
-          <div id="contactFooter" class="footerBorder">
-            <h3>Kontakt:</h3>
-            <p>
-              Kleiderspende (fiktiver Verein) <br><br>
-              Musterstraße 55 <br>
-              80xxx München <br>
-              Tel: <a href="tel:+49000000000">+49 xxx xxx xxx</a>
-              <br>
-              Mail: <a href="mailto:info@kleiderspende-fiktiver-verein.de">info@kleiderspende-fiktiver-verein.de</a>
-            </p>
-          </div>
-        <!--second column for legals-->
-          <div id="legalFooter" class="footerBorder">
-            <h3>Rechtliche Hinweise:</h3>
-            <p>
-              <a href="../files/impressum.html" target="_blank">Impressum</a>
-              <br>
-              <a href="../files/datenschutz.html" target="_blank">Datenschutzerklärung</a>
-              <br>
-              &copy; 2023 Kleiderspende (fiktiver Verein)
-            </p>
-          </div>
-        <!--third column for social media links-->
-          <div id="socialmediaFooter">
-            <h3>Follow us:</h3>
+      <!--first column for contact information-->
+        <div id="contactFooter" class="footerBorder">
+          <h3>Kontakt:</h3>
+          <p>
+            Kleiderspende (fiktiver Verein) <br><br>
+            Musterstraße 55 <br>
+            80xxx München <br>
+            Tel: <a href="tel:+49000000000">+49 xxx xxx xxx</a>
             <br>
-            <a href="https://de-de.facebook.com/" target="_blank">
-            <img src="../assets/img/f_logo_RGB-Blue_58.png" width="58px" height="58px"></a>
-            <br><br>
-            <a href="https://www.instagram.com/" target="_blank">
-            <img src="../assets/img/Instagram_Glyph_Gradient_RGB.png" width="58px" height="58px"></a>
-          </div>
-      </footer>
-    
-      <!--including own javascript file-->
-      <script src="../assets/js/script.js"></script>
-                                                   
-  </body>     <!--end of visible area-->
+            Mail: <a href="mailto:info@kleiderspende-fiktiver-verein.de">info@kleiderspende-fiktiver-verein.de</a>
+          </p>
+        </div>
+      <!--second column for legals-->
+        <div id="legalFooter" class="footerBorder">
+          <h3>Rechtliche Hinweise:</h3>
+          <p>
+            <a href="../files/impressum.html" target="_blank">Impressum</a>
+            <br>
+            <a href="../files/datenschutz.html" target="_blank">Datenschutzerklärung</a>
+            <br>
+            &copy; 2023 Kleiderspende (fiktiver Verein)
+          </p>
+        </div>
+      <!--third column for social media links-->
+        <div id="socialmediaFooter">
+          <h3>Follow us:</h3>
+          <br>
+          <a href="https://de-de.facebook.com/" target="_blank">
+          <img src="../assets/img/f_logo_RGB-Blue_58.png" width="58px" height="58px"></a>
+          <br><br>
+          <a href="https://www.instagram.com/" target="_blank">
+          <img src="../assets/img/Instagram_Glyph_Gradient_RGB.png" width="58px" height="58px"></a>
+        </div>
+    </footer>
   
-  </html>     <!--end of index.html-->      
+    <!--including own javascript file-->
+    <script src="../assets/js/script.js"></script>
+                                                 
+</body>     <!--end of visible area-->
+
+</html>     <!--end of index.html-->
