@@ -303,11 +303,220 @@ box-shadow: rgba(0, 0, 0, 0.7) 0px .25em 1em, inset rgba(0, 0, 0, 0.15) 0px -.5e
     box-shadow: 0px 20px 0px 0px gray;
 }
 
+/********************************************************************************
+    positioning for index html
+*********************************************************************************/
+/************ Section 2 icons how to  *************/
+/************ div of section 2 place in content area and get own grid ***********/
+#contentS2 {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr 25px 0.25fr 25px) 1fr;
+}
+/************ positioning the icons *****************/
+#icon1 {
+    grid-column: 1;
+}
+#icon2 {
+    grid-column: 3;
+}
+#icon3 {
+    grid-column: 5;
+}
+#icon4 {
+    grid-column: 7;
+}
+#icon5 {
+    grid-column: 9;
+}
+/************ justfy the icons *****************/
+#icon1, #icon2, #icon3, #icon4, #icon5 {
+    justify-self: center;
+}
+/************ Section 3 picture caroussel  *************/
+/************ div of section 3 place in content area and get own grid ***********/
+#contentS3 {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: var(--col-xl) 1fr var(--col-xl);
+    grid-template-rows: 1fr minmax(100px, auto);
+}
+/************ placing and sizing the control arrows, image and text **********/
+#prevArrow {
+    grid-column: 1;
+    grid-row: 1;
+    transform: rotate(180deg);
+    max-width: 50px;
+    justify-self: center;
+}
+#nextArrow {
+    grid-column: 3;
+    grid-row: 1;
+    max-width: 50px;
+    max-width: 50px;
+    justify-self: center;
+}
+#imgCarousel1, #imgCarousel2, #imgCarousel3 {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: 580px;
+    justify-self: center;
+}
+#imgDiscription1, #imgDiscription2, #imgDiscription3 {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    max-width: 500px;
+    margin-top: 20px;
+}
+/************ Section 4 blog preview  *************/
+/************ div of section 4 place row ***********/
+#contentS4 {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr 25px 1fr var(--col-xl);
+}
+#contentS4background{
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row: 1;
+    z-index: 0;
+}
+#blogImg {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    z-index: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#contentS4Text {
+    grid-column: 4;
+    grid-row: 1;
+    z-index: 1;
+    margin-top: 100px;
+    display: grid;
+    grid-template-rows: 1fr minmax(auto, 100px);
+}
+#blog1Article {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+#prevBlogWrap {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 25px 1fr;
+}
+#prevBlog2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+#prevBlog3 {
+    grid-column: 3;
+    grid-row: 2;
+}
 
-
+/********************************************************************************
+    style for index html
+*********************************************************************************/
+/************ Section 2 icons how to  *************/
+/************ style of the icons *****************/
+.iconType1{
+    max-width: 200px;
+    max-height: 200px;
+    align-self: top;
+    transition: all 1s ease-in-out;
+}
+/******** animate icontype1 on hover *************/
+.iconType1:hover {
+    transform: rotate(360deg);
+}
+.iconType2 {
+    max-width: 50px;
+    max-height: 100px;
+    margin-top: 50px;
+    justify-content: center;
+    align-self: top;
+}
+/*********** text under the icons *************/
+.pIcons {
+    color: #4CB055;
+    margin-top: 10px;
+    font-size: 125%;
+    font-weight: 600;
+    text-align: center;
+}
+/************ Section 3 picture carousel *************/
+/*********** style button arrows *************/
+.buttonCarousel {
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    max-height: 50px;
+    align-self: center;
+    background-color: transparent;
+}
+.buttonCarousel:hover {
+    transition: .2 ease-in-out;
+    transform: scale(1.25);   
+}
+/*********** style and display images of carousel *************/
+.imgCarousel {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 30%);
+    border-radius: 50px;   
+}
+.CarouselItemDisable {
+    display: none;
+}
+/*********** style image discription of carousel *************/
+.imgDiscription {
+    font-size: 2.5em !important;
+}
+/************ Section 4 preview Blog.html*************/
+.blogBigImage {
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 30%);
+    border-radius: 25px; 
+}
 .contentBlockBackground {
     background: rgb(60,0,105);
     background: linear-gradient(90deg, rgba(60,0,105,1) 0%, rgba(150,30,122,1) 50%, rgba(255,138,244,1) 100%);
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
+}
+.prevBlogImg {
+    max-width: 250px;
+    max-height: 250px;
+    z-index: 2;
+    padding-top: 20px;
+}
+.prevBlog {
+    max-width: 250px;
+    background-color: #961E7A;
+    box-shadow: 0px 1px 6px rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    color: white;   
+}
+.prevBlog:hover {
+    transition: 1s ease-in-out;
+    transform:scale(1.25);
+}
+.prevBlogImg:hover {
+    filter: grayscale(1);
+}
+.pBlogHeadline{
+    color: white;
+}
+.prevBlogText {
+    padding: 10px 5px 20px 5px;
+    text-align: center;    
+}
+.pBlog {
+    color: white;
 }

@@ -5,7 +5,7 @@
 Index html for: Studienarbeit Programmierung von Webanwendungsoberflächen
 Description: Fiktive Vereinsseite für zur Registrierung von Kleiderspenden
 
-Version: 0.1
+Version: 0.2
 Author: Riccardo Princiotto
 License: none
 Tags: html5, responsiv, bootstrap, CSS animations, Adobe content
@@ -118,50 +118,138 @@ Notices: the named society, the texts and everything on this page is fiction.
         </div>
       </section>
 
+      <!--Icons how to-->
+      <section class="section">
+        <h2 id="h2S2">Deine Spende in drei Schritten</h2>
+        <div id="contentS2"> <!--div get`s a content specific grid system-->
+            <div id="icon1">
+              <img class="iconType1" src="../assets/img/registrate_icon.gif">
+              <p class="pIcons">Spende registrieren</p>
+            </div>
+              <img id="icon2" class="iconType2" src="../assets/img/step-between.png">
+            <div id="icon3">
+              <img class="iconType1" src="../assets/img/pack_icon.gif">
+              <p class="pIcons">einpacken</p>
+            </div>
+              <img id="icon4" class="iconType2" src="../assets/img/step-between.png">
+            <div id="icon5">
+              <img class="iconType1" src="../assets/img/deliver_icon.gif">
+              <p class="pIcons">abholen lassen oder <br>zu uns bringen</p>
+            </div>
+        </div>
+      </section>
 
-      <!--Content Area for every single html-->
+      <!--picture carousel-->
+      <section class="section">
+        <h2 id="h2S3">Ein paar Impressionen...</h2>
+        <div id="contentS3"> <!--div get`s a content specific grid system-->
+                    <!--prevArrow-->
+                    <button id="prev" class="buttonCarousel">
+                    <img id="prevArrow" src="../assets/img/pfeil.png">
+                    </button>
+                    <!--pictures of the carousel with active and disable class and bootstrap class img-fluid-->                   
+                    <img class="imgCarousel CarouselItemActive img-fluid" id="imgCarousel1" src="../assets/img/thankyou.jpg">
+                    <img class="imgCarousel CarouselItemDisable img-fluid" id="imgCarousel2" src="../assets/img/donations.jpg">
+                    <img class="imgCarousel CarouselItemDisable img-fluid" id="imgCarousel3" src="../assets/img/volunteers.jpg">
+                    <!--nextArrow-->
+                    <button id="next" class="buttonCarousel">
+                    <img id="nextArrow" src="../assets/img/pfeil.png">
+                    </button>
+                    <!--Image discriptions-->
+                    <p id="imgDiscription1" class="imgDiscription">
+                      Wir sagen Danke ...
+                    </p>
+                    <p id="imgDiscription2" class="imgDiscription CarouselItemDisable">
+                      ... zu all Euren Spenden ...
+                    </p>
+                    <p id="imgDiscription3" class="imgDiscription CarouselItemDisable">
+                      ... und unseren vielen Helfern.
+                    </p>
+        </div>
+      </section>
 
+      <!--preview from blog.html-->
+      <section class="section">
+        <h2 id="h2S4">Was gibt es neues?</h2>
+        <div id="contentS4"> <!--div get`s a content specific grid system-->
+          <!--colored background area-->  
+          <div id="contentS4background" class="contentBlockBackground"></div>
+          <!--Image last blog article--> 
+          <a href="../files/blog.html" id="blogImg">
+          <img class="blogBigImage img-fluid" src="../assets/img/ordnung.jpg">
+          </a>
+          <!--Preview text from last blog--> 
+          <div id="contentS4Text">
+            <article id="blog1Article">
+              <h2 class="pBlogHeadline">Neuerster Blogbeitrag</h2>
+              <!--Text placeholder with lorem ipsum generator-->
+              <p class="pBlog">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                  sed diam nonumy eirmod tempor invidunt ut labore et 
+                  dolore magna aliquyam erat, sed diam voluptua. 
+                  At vero eos et accusam et justo duo dolores et 
+                  ea rebum. Stet clita kasd gubergren, no sea takimata 
+                  sanctus est Lorem ipsum dolor sit amet. 
+              </p>
+            </article>
+            <div id="prevBlogWrap">
+              <div id="prevBlog2" class="prevBlog prevBlogIndex">
+                <a href="../files/blog.html"><img class="prevBlogImg" src="../assets/img/blog_prev.jpg"></a>
+                <p class="prevBlogText">
+                  Ein weiterer Blog
+                </p>
+              </div>
+              <div id="prevBlog3" class="prevBlog prevBlogIndex">
+                <a href="../files/blog.html"><img class="prevBlogImg" src="../assets/img/blog_prev.jpg"></a>
+                <p class="prevBlogText">
+                  Und noch ein Blog
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!--footer with three columns-->
     <footer>
-        <!--first column for contact information-->
-          <div id="contactFooter" class="footerBorder">
-            <h3>Kontakt:</h3>
-            <p>
-              Kleiderspende (fiktiver Verein) <br><br>
-              Musterstraße 55 <br>
-              80xxx München <br>
-              Tel: <a href="tel:+49000000000">+49 xxx xxx xxx</a>
-              <br>
-              Mail: <a href="mailto:info@kleiderspende-fiktiver-verein.de">info@kleiderspende-fiktiver-verein.de</a>
-            </p>
-          </div>
-        <!--second column for legals-->
-          <div id="legalFooter" class="footerBorder">
-            <h3>Rechtliche Hinweise:</h3>
-            <p>
-              <a href="../files/impressum.html" target="_blank">Impressum</a>
-              <br>
-              <a href="../files/datenschutz.html" target="_blank">Datenschutzerklärung</a>
-              <br>
-              &copy; 2023 Kleiderspende (fiktiver Verein)
-            </p>
-          </div>
-        <!--third column for social media links-->
-          <div id="socialmediaFooter">
-            <h3>Follow us:</h3>
+      <!--first column for contact information-->
+        <div id="contactFooter" class="footerBorder">
+          <h3>Kontakt:</h3>
+          <p>
+            Kleiderspende (fiktiver Verein) <br><br>
+            Musterstraße 55 <br>
+            80xxx München <br>
+            Tel: <a href="tel:+49000000000">+49 xxx xxx xxx</a>
             <br>
-            <a href="https://de-de.facebook.com/" target="_blank">
-            <img src="../assets/img/f_logo_RGB-Blue_58.png" width="58px" height="58px"></a>
-            <br><br>
-            <a href="https://www.instagram.com/" target="_blank">
-            <img src="../assets/img/Instagram_Glyph_Gradient_RGB.png" width="58px" height="58px"></a>
-          </div>
-      </footer>
-    
-      <!--including own javascript file-->
-      <script src="../assets/js/script.js"></script>
-                                                   
-  </body>     <!--end of visible area-->
+            Mail: <a href="mailto:info@kleiderspende-fiktiver-verein.de">info@kleiderspende-fiktiver-verein.de</a>
+          </p>
+        </div>
+      <!--second column for legals-->
+        <div id="legalFooter" class="footerBorder">
+          <h3>Rechtliche Hinweise:</h3>
+          <p>
+            <a href="../files/impressum.html" target="_blank">Impressum</a>
+            <br>
+            <a href="../files/datenschutz.html" target="_blank">Datenschutzerklärung</a>
+            <br>
+            &copy; 2023 Kleiderspende (fiktiver Verein)
+          </p>
+        </div>
+      <!--third column for social media links-->
+        <div id="socialmediaFooter">
+          <h3>Follow us:</h3>
+          <br>
+          <a href="https://de-de.facebook.com/" target="_blank">
+          <img src="../assets/img/f_logo_RGB-Blue_58.png" width="58px" height="58px"></a>
+          <br><br>
+          <a href="https://www.instagram.com/" target="_blank">
+          <img src="../assets/img/Instagram_Glyph_Gradient_RGB.png" width="58px" height="58px"></a>
+        </div>
+    </footer>
   
-  </html>     <!--end of index.html-->      
+    <!--including own javascript file-->
+    <script src="../assets/js/script.js"></script>
+                                                 
+</body>     <!--end of visible area-->
+
+</html>     <!--end of index.html-->
